@@ -8,15 +8,22 @@ const Apology = ({ current, onClick }) => {
   const useStyles = {
     card: {
       width: "400px",
+    },
+    content: {
+      font: "bold 18px Courier, sans-serif"
+    },
+    date: {
+      font: "10px Courier"
     }
   }
 
   return (
     <Card style={useStyles.card}>
       <CardContent>
-        <span> {current.apology}</span>
+        <span style={useStyles.content}> {current.apology}</span>
         <br></br>
-        <span>{current.date} </span>
+        <br></br>
+        <span style={useStyles.date}>{current.date} </span>
       </CardContent>
       <CardActions>
         <IconButton onClick={onClick}>

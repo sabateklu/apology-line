@@ -20,30 +20,32 @@ class SubmissionForm extends React.Component {
 
   render() {
     const useStyles = {
-      // TextField: {
-      //   position: "relative",
-      //   margin: "0 auto",
-      //   width: "50%",
-      //   marginTop: "100px"
-      // },
-      // buttonDiv: {
-      //   position: "absolute",
-      //   left: "0"
-      // }
+      form: {
+        display: "table",
+        width: "500px",
+        margin: "50px auto",
+      }
     }
     return (
-      <div>
-        <div style={useStyles.TextField}>
+      <div style={useStyles.form}>
+        <div>
           <TextField
             id = "field"
-            label="Write your apology here"
+            label="write your apology here"
             multiline
             rows={10}
-            variant="filled"
-            fullWidth="true"
+            variant="outlined"
+            color="secondary"
+            fullWidth={true}
           />
           <div style={useStyles.buttonDiv}>
-            <Button variant="outlined" onClick={this.onClick}>now let it go</Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="small"
+              onClick={this.onClick}>
+                now let it go
+            </Button>
           </div>
         </div>
 
