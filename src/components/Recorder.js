@@ -52,9 +52,16 @@ class Recorder extends Component {
   }
 
   render () {
+    let useStyle = {
+      recorder: {
+        display: "table",
+        width: "100px",
+        margin: "50px auto",
+      }
+    }
     return (
-      <div>
-        <audio controls src={this.state.audioList[0]} autoPlay />
+      <div style={useStyle.recorder}>
+        {/* <audio controls src={this.state.audioList[0]} autoPlay /> */}
         { !this.state.recording && <button onClick={(e)=> {this.startRecording(e)}}>Record</button>}
         { this.state.recording && <button onClick={(e) => {this.stopRecording(e)}}>Stop</button>}
       </div>

@@ -69,10 +69,9 @@ class App extends React.Component {
         <span id="tagline" style={useStyles.tagline} onClick={()=> {this.viewChanger("submission")}}>submit an apology</span>
         <div>
         {
-          this.state.view === 'apologies' ? <Apologies apologies={this.state.apologies} /> : <SubmissionForm onSubmit={this.onSubmit}/>
+          this.state.view === 'apologies' ? <Apologies apologies={this.state.apologies} /> : <Recorder onSubmit={this.onSubmit}/>
         }
         </div>
-        <Recorder onSubmit={this.onSubmit}/>
       </div>
     )
   }

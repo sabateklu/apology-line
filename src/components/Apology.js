@@ -20,7 +20,8 @@ const Apology = ({ current, onClick }) => {
   return (
     <Card style={useStyles.card}>
       <CardContent>
-        <span style={useStyles.content}> {current.apology}</span>
+        {/* <span style={useStyles.content}> {current.apology}</span> */}
+        <audio src={current.apology} controls autoPlay />
         <br></br>
         <br></br>
         <span style={useStyles.date}>{current.date} </span>
