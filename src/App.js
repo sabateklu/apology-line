@@ -45,21 +45,18 @@ class App extends React.Component {
         width: "100%"
       },
       header: {
-        margin: "0 auto",
+        margin: "50px auto",
         width: "50%",
         textAlign: "center",
         cursor: "pointer",
         color: "#C42632",
-        font: "80px Courier, sans-serif"
+        font: "100px Courier, sans-serif"
       },
       tagline: {
         display: "table",
         margin: "0 auto",
-        font: "20px Courier, sans-serif",
+        font: "30px Courier, sans-serif",
         cursor: "pointer",
-      },
-      hover: {
-        color: "red"
       }
     }
     return (
