@@ -72,7 +72,7 @@ class App extends React.Component {
           this.state.view === 'apologies' ? <Apologies apologies={this.state.apologies} /> : <SubmissionForm onSubmit={this.onSubmit}/>
         }
         </div>
-        <Recorder />
+        <Recorder onSubmit={this.onSubmit}/>
       </div>
     )
   }
