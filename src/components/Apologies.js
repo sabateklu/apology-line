@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Apology from './Apology';
 
 const Apologies = ({ apologies }) => {
-  const [current, setCurrent] = useState({apology:'browse apologies'})
+  const [current, setCurrent] = useState({})
 
   const onClick = ()=> {
     let n = Math.floor(Math.random() * apologies.length);
