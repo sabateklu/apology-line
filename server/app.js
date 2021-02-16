@@ -32,4 +32,4 @@ app.post('/api/apologies', (req, res) => {
   .catch((err) => res.send(err))
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(process.env.PORT || port, () => console.log(`Example app listening on port ${port}!`));
