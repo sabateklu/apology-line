@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.js",
-    "webpack": "webpack --watch",
-    "seed": "node database/seed.js",
-    "postinstall": "node database/seed.js"
+    "webpack": "webpack --watch"
+    //"seed": "node database/seed.js",
+    //"postinstall": "node database/seed.js"
   },
   "keywords": [],
   "author": "",
