@@ -27,7 +27,7 @@ app.get('/api/apologies', (req, res) => {
 app.post('/api/apologies', (req, res) => {
   Apologies.create({ apology: req.body.apology, date: req.body.data })
   .then(() => {
-    res.send(200)
+    res.sendStatus(200)
   })
   .catch((err) => res.send(err))
 })

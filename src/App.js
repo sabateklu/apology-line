@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import SubmissionForm from './components/SubmissionForm';
 import Apologies from './components/Apologies';
+import Recorder from './components/Recorder';
 
 class App extends React.Component {
   constructor(props) {
@@ -71,6 +72,7 @@ class App extends React.Component {
           this.state.view === 'apologies' ? <Apologies apologies={this.state.apologies} /> : <SubmissionForm onSubmit={this.onSubmit}/>
         }
         </div>
+        <Recorder />
       </div>
     )
   }
