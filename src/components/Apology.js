@@ -7,13 +7,19 @@ const Apology = ({ current, onClick }) => {
 
   const useStyles = {
     card: {
-      width: "400px",
+      width: "600px",
+      height: "300px",
+      position: "relative"
     },
     content: {
       font: "bold 18px Courier, sans-serif"
     },
     date: {
       font: "10px Courier"
+    },
+    audio: {
+      margin: "0 auto",
+      display: "flex",
     }
   }
 
