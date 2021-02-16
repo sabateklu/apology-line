@@ -9,8 +9,7 @@ const Apology = ({ current, onClick }) => {
     card: {
       width: "600px",
       height: "300px",
-      position: "relative",
-      border: "1px solid black"
+      position: "relative"
     },
     content: {
       font: "bold 18px Courier, sans-serif"
