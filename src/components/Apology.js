@@ -7,13 +7,20 @@ const Apology = ({ current, onClick }) => {
 
   const useStyles = {
     card: {
-      width: "400px",
+      width: "600px",
+      height: "300px",
+      position: "relative",
+      border: "1px solid black"
     },
     content: {
       font: "bold 18px Courier, sans-serif"
     },
     date: {
       font: "10px Courier"
+    },
+    audio: {
+      margin: "0 auto",
+      display: "flex",
     }
   }
 
@@ -21,7 +28,7 @@ const Apology = ({ current, onClick }) => {
     <Card style={useStyles.card}>
       <CardContent>
         {/* <span style={useStyles.content}> {current.apology}</span> */}
-        <audio src={current.apology} controls autoPlay />
+        <audio src={current.apology} controls autoPlay style={useStyles.audio}/>
         <br></br>
         <br></br>
         <span style={useStyles.date}>{current.date} </span>

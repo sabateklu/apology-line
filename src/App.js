@@ -46,17 +46,17 @@ class App extends React.Component {
         width: "100%"
       },
       header: {
-        margin: "0 auto",
+        margin: "50px auto",
         width: "50%",
         textAlign: "center",
         cursor: "pointer",
         color: "#C42632",
-        font: "80px Courier, sans-serif"
+        font: "160px Courier, sans-serif"
       },
       tagline: {
         display: "table",
         margin: "0 auto",
-        font: "20px Courier, sans-serif",
+        font: "50px Courier, sans-serif",
         cursor: "pointer",
       },
       hover: {
@@ -65,7 +65,7 @@ class App extends React.Component {
     }
     return (
       <div style={useStyles.parent}>
-        <p style={useStyles.header} onClick={()=> {this.viewChanger("apologies")}}>Apology-Line</p>
+        <p style={useStyles.header} onClick={()=> {this.viewChanger("apologies")}}>Apology Line</p>
         <span id="tagline" style={useStyles.tagline} onClick={()=> {this.viewChanger("submission")}}>submit an apology</span>
         <div>
         {

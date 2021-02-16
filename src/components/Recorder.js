@@ -12,8 +12,10 @@ class Recorder extends Component {
 
   async componentDidMount() {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-
+    let audio = document.getElementById("detectAudio");
+    audio.srcObj = stream;
     this.mediaRecorder = new MediaRecorder(stream);
+
     this.chunks= [];
 
     this.mediaRecorder.ondataavailable = e => {
@@ -57,13 +59,19 @@ class Recorder extends Component {
         display: "table",
         width: "100px",
         margin: "50px auto",
+      },
+      button: {
+        borderRadius: "5px",
+        padding: "20px 40px",
+        border: "1px solid black",
+        font: "20px Courier"
       }
     }
     return (
       <div style={useStyle.recorder}>
-        {/* <audio controls src={this.state.audioList[0]} autoPlay /> */}
-        { !this.state.recording && <button onClick={(e)=> {this.startRecording(e)}}>Record</button>}
-        { this.state.recording && <button onClick={(e) => {this.stopRecording(e)}}>Stop</button>}
+        <audio controls autoPlay id="detectAudio"/>
+        { !this.state.recording && <button onClick={(e)=> {this.startRecording(e)}} style={useStyle.button}>Record</button>}
+        { this.state.recording && <button onClick={(e) => {this.stopRecording(e)}} style={useStyle.button}>Stop</button>}
       </div>
     )
   }
