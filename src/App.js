@@ -51,21 +51,18 @@ class App extends React.Component {
         textAlign: "center",
         cursor: "pointer",
         color: "#C42632",
-        font: "160px Courier, sans-serif"
+        font: "100px Courier, sans-serif"
       },
       tagline: {
         display: "table",
         margin: "0 auto",
-        font: "50px Courier, sans-serif",
+        font: "30px Courier, sans-serif",
         cursor: "pointer",
-      },
-      hover: {
-        color: "red"
       }
     }
     return (
       <div style={useStyles.parent}>
-        <p style={useStyles.header} onClick={()=> {this.viewChanger("apologies")}}>Apology Line</p>
+        <p style={useStyles.header} onClick={()=> {this.viewChanger("apologies")}}>Apology-Line</p>
         <span id="tagline" style={useStyles.tagline} onClick={()=> {this.viewChanger("submission")}}>submit an apology</span>
         <div>
         {
