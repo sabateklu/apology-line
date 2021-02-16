@@ -12,7 +12,6 @@ class Recorder extends Component {
 
   async componentDidMount() {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    let audio = document.getElementById("detectAudio");
 
     this.mediaRecorder = new MediaRecorder(stream);
 
@@ -43,10 +42,6 @@ class Recorder extends Component {
   saveAudio() {
     const blob = new Blob(this.chunks, { type: 'audio/wav' });
     const audioUrl = window.URL.createObjectURL(blob);
-    let audio = document.getElementById("detectAudio");
-    audio.src = audioUrl;
-    audio.srcObject = audioUrl;
-
     let apology = {
       apology: audioUrl,
       date: (new Date()).toLocaleString()
@@ -77,7 +72,6 @@ class Recorder extends Component {
     }
     return (
       <div style={useStyle.recorder}>
-        <audio controls id="detectAudio"/>
         { !this.state.recording && <button onClick={(e)=> {this.startRecording(e)}} style={useStyle.button}>Record</button>}
         { this.state.recording && <button onClick={(e) => {this.stopRecording(e)}} style={useStyle.button}>Stop</button>}
       </div>
