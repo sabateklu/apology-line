@@ -71,7 +71,8 @@ class Recorder extends Component {
         border: "1px solid black",
         font: "20px Courier",
         display: "flex",
-        marginLeft: "80px"
+        margin: "60px 80px",
+
       }
     }
     return (
