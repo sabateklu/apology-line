@@ -22,14 +22,13 @@ const Apology = ({ current, onClick }) => {
       display: "flex",
     }
   }
-
   return (
     <Card style={useStyles.card}>
       <CardContent>
         <span style={useStyles.content}> {current.apology}</span>
         <br></br>
         <br></br>
-        <span style={useStyles.date}>{current.date} </span>
+        <span style={useStyles.date}>{current.date}</span>
       </CardContent>
       <CardActions>
         <IconButton onClick={onClick}>

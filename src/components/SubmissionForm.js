@@ -14,6 +14,7 @@ class SubmissionForm extends React.Component {
       apology: body.value,
       date: (new Date()).toLocaleString()
     }
+    console.log(apology);
     this.props.onSubmit(apology);
     body.value = ''
   }
