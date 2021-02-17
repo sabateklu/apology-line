@@ -20,6 +20,15 @@ const Apology = ({ current, onClick }) => {
     audio: {
       margin: "0 auto",
       display: "flex",
+    },
+    icon: {
+      width: "90px",
+      height: "60px",
+      padding: "40px 0",
+      backgroundColor: "white"
+    },
+    container: {
+      backgroundColor: "white"
     }
   }
   return (
@@ -31,8 +40,8 @@ const Apology = ({ current, onClick }) => {
         <span style={useStyles.date}>{current.date}</span>
       </CardContent>
       <CardActions>
-        <IconButton onClick={onClick}>
-          <ArrowForwardIosIcon />
+        <IconButton onClick={onClick} style={useStyles.container}>
+          <ArrowForwardIosIcon style={useStyles.icon}/>
         </IconButton>
       </CardActions>
     </Card>
