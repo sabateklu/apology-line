@@ -58,6 +58,13 @@ class App extends React.Component {
         margin: "0 auto",
         font: "30px Courier, sans-serif",
         cursor: "pointer",
+      },
+      anchor: {
+        font: "16px Courier, sans-serif",
+        marginTop: "200px",
+        textAlign: "center",
+        left: "1000",
+        color: "black"
       }
     }
     return (
@@ -68,6 +75,11 @@ class App extends React.Component {
         {
           this.state.view === 'apologies' ? <Apologies apologies={this.state.apologies} /> : <Recorder onSubmit={this.onSubmit}/>
         }
+        </div>
+        <div style={useStyles.anchor}>
+          <a href="https://apology-written.herokuapp.com/">See Written Apologies Here</a>
+          <span>||</span>
+          <a href="https://wondery.com/shows/the-apology-line/">Checkout The Apology Line Podcast</a>
         </div>
       </div>
     )
