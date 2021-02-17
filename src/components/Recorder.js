@@ -42,12 +42,15 @@ class Recorder extends Component {
   saveAudio() {
     const blob = new Blob(this.chunks, { type: 'audio/wav' });
     const audioUrl = window.URL.createObjectURL(blob);
+    let audio = new URL (audioUrl);
+
     let apology = {
       apology: audioUrl,
       date: (new Date()).toLocaleString()
     };
 
     this.props.onSubmit(apology);
+
 
     const audios = this.state.audioList.push(audioUrl);
     this.setState({audios});

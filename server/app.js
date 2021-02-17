@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Apologies = require('../database/index.js');
+const fs = require('fs');
 
 const app = express()
 const port = 3000

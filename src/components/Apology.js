@@ -3,6 +3,7 @@ import { Card, CardActions, CardContent } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
+
 const Apology = ({ current, onClick }) => {
 
   const useStyles = {
@@ -23,6 +24,7 @@ const Apology = ({ current, onClick }) => {
     }
   }
 
+
   return (
     <Card style={useStyles.card}>
       <CardContent>
@@ -30,7 +32,7 @@ const Apology = ({ current, onClick }) => {
         <audio src={current.apology} controls autoPlay style={useStyles.audio}/>
         <br></br>
         <br></br>
-        <span style={useStyles.date}>{current.date} </span>
+        <span style={useStyles.date}>{current.date}</span>
       </CardContent>
       <CardActions>
         <IconButton onClick={onClick}>

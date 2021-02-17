@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Apology from './Apology';
 
+
 const Apologies = ({ apologies }) => {
   const [current, setCurrent] = useState({})
 
