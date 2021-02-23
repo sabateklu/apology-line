@@ -76,8 +76,8 @@ class App extends React.Component {
         }
         </div>
         <div style={useStyles.anchor}>
-          {/* <a href="https://apologyline.herokuapp.com/">See Audio Apologies Here</a>
-          <span>||</span> */}
+          <a href="https://apologyline.herokuapp.com/">See Audio Apologies Here</a>
+          <span>||</span>
           <a href="https://wondery.com/shows/the-apology-line/">Checkout The Apology Line Podcast</a>
         </div>
       </div>
