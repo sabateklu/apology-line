@@ -35,6 +35,7 @@ class Recorder extends Component {
   stopRecording(e) {
     e.preventDefault();
     this.mediaRecorder.stop();
+    alert('your apology has been submitted')
     this.setState({ recording: false});
     this.saveAudio();
   }
@@ -61,10 +62,6 @@ class Recorder extends Component {
 
     // const audioUrl = window.URL.createObjectURL(blob);
     // let audio = new URL (audioUrl);
-
-    // if (audio) {
-
-    // }
 
     const audios = this.state.audioList.push(audio);
     this.setState({audios});
