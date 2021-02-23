@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   onSubmit(apology) {
-    console.log(apology);
+    console.log('we are here');
     axios.post('/api/apologies', apology)
     .then((results) => {
       this.componentDidMount();

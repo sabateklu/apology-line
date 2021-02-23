@@ -40,19 +40,33 @@ class Recorder extends Component {
   }
 
   saveAudio() {
+    const onSubmit = this.props.onSubmit
     const blob = new Blob(this.chunks, { type: 'audio/wav' });
-    const audioUrl = window.URL.createObjectURL(blob);
-    let audio = new URL (audioUrl);
+    var reader = new window.FileReader();
+    reader.readAsDataURL(blob);
+    let audio;
+    reader.onloadend = function() {
+      let base64 = reader.result;
+      audio = base64
+      console.log(audio);
+      // return audio;
+      let date = new Date();
+      let apology = {
+        apology: audio,
+        date: date.toLocaleString()
+      };
+      console.log(apology);
+      onSubmit(apology);
+    }
 
-    let apology = {
-      apology: audioUrl,
-      date: (new Date()).toLocaleString()
-    };
+    // const audioUrl = window.URL.createObjectURL(blob);
+    // let audio = new URL (audioUrl);
 
-    this.props.onSubmit(apology);
+    // if (audio) {
 
+    // }
 
-    const audios = this.state.audioList.push(audioUrl);
+    const audios = this.state.audioList.push(audio);
     this.setState({audios});
   }
 
